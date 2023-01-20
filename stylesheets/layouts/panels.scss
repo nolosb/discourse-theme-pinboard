@@ -12,6 +12,7 @@ body:not(.landing-page) {
 .users-page,
 .user-messages-page,
 .user-summary-page,
+.user-badges-page,
 .user-activity-page,
 .user-notifications-page,
 .user-invites-page,
@@ -43,15 +44,14 @@ body:not(.landing-page) {
     }
   }
 }
-// Topic pages 
-.archetype-regular
-  #main-outlet {
-    // Render panels on sub-container, else notification banners are within the panel
-    > .regular  {
-      @include panel($panel-padding);
-      margin-top: $panel-margin-static-pages;
-    }
+// Topic pages
+.archetype-regular #main-outlet {
+  // Render panels on sub-container, else notification banners are within the panel
+  > .regular {
+    @include panel($panel-padding);
+    margin-top: $panel-margin-static-pages;
   }
+}
 
 // Declarations for pages without body class
 #main-outlet .reviewable {
