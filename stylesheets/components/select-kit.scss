@@ -1,0 +1,17 @@
+.select-kit {
+  // Adjust text-alignment in select-kit header
+  .select-kit-header {
+    .select-kit-selected-name {
+      .badge-wrapper.bullet {
+        align-items: center;
+        .badge-category-bg {
+          margin-right: 7px;
+        }
+      }
+      .name {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

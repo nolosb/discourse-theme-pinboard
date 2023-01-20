@@ -1,0 +1,11 @@
+{
+  "name": "Pinboard",
+  "about_url": null,
+  "license_url": null,
+  "assets": {
+    "icon-categories": "assets/compass-solid.svg",
+    "icon-tags": "assets/tags-solid.svg"
+  },
+  "color_schemes": {
+  }
+}

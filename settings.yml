@@ -1,0 +1,25 @@
+adjust_header_search:
+  type: string
+  default: "100px"
+  description:
+    en: Adjust header search field position (relative distance from logo)
+custom_top_page:
+  type: bool
+  default: false
+  description:
+    en: Custom layout for the top page. Requires the Versatile Showcase component.
+show_categories:
+  type: bool
+  default: true
+  description:
+    en: Show categories on the interface
+show_tags:
+  type: bool
+  default: true
+  description:
+    en: Show tags on the interface
+sidebar_show_more:
+  type: bool
+  default: false
+  description:
+    en: Show the More menu on the sidebar

@@ -1,0 +1,12 @@
+.versatile-showcase {
+  .col {
+    @include panel($panel-padding);
+    padding-top: 0;
+    button {
+      display: none;
+    }
+  }
+  .col-0 {
+    margin-top: 2rem;
+  }
+}

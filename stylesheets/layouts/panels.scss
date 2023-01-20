@@ -1,0 +1,52 @@
+#main-outlet {
+  .main-content {
+    // Lists except top page
+    &.discovery:not(.top),
+    &.tag {
+      .list-container #list-area {
+        @include panel(2rem);
+        padding-top: 1.25rem;
+        margin-top: 2rem;
+      }
+    }
+    // Non-lists
+    &.topic,
+    &.user,
+    &.admin,
+    &.review,
+    &.tags.index,
+    &.groups,
+    &.group,
+    &.badges,
+    &.full-page-search {
+      @include panel(2rem);
+    }
+  }
+}
+.about-page,
+.static-faq,
+.static-tos,
+.static-privacy,
+.users-page {
+  #main-outlet .container:not(#main-container) {
+    @include panel(2rem);
+  }
+}
+//remove shaded backgrounds
+.main-content {
+  &.full-page-search {
+    .search-container {
+      .search-header,
+      .search-filters,
+      .search-filters .search-advanced-filters {
+        background: transparent;
+      }
+    }
+  }
+  &.group {
+    .group-details-container {
+      background: transparent;
+    }
+  }
+}
+

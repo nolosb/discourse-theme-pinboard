@@ -1,0 +1,21 @@
+.landing-page {
+  #main-outlet .main-content {
+    @if ($custom_top_page == "false") {
+      // Show top topics list as panel
+      &.discovery.top {
+        .list-container #list-area {
+          @include panel(2rem);
+          padding-top: 1.25rem;
+          margin-top: 2rem;
+        }
+      }
+    }
+    @if ($custom_top_page == "true") {
+      // Hide top topics list so Versatile Showcase lists are shown as separate panels
+      .contents,
+      footer.topic-list-bottom {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "author": "Manuel Kostka",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint-config-discourse": "latest"
+  }
+}
