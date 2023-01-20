@@ -1,33 +1,5 @@
-body:not(.landing-page) {
-  #main-outlet {
-    .list-container #list-area {
-      @include panel($panel-padding);
-      margin-top: 1rem;
-    }
-  }
-}
-.archetype-regular,
-.admin-interface,
-.user-messages-page,
-.user-summary-page,
-.user-activity-page,
-.user-notifications-page,
-.user-invites-page,
-.user-preferences-page,
-.badges-page,
-.groups-page,
-.about-page,
-.static-faq,
-.static-tos,
-.static-privacy {
-  #main-outlet {
-    @include panel($panel-padding);
-    margin-top: 0.5rem;
-  }
-}
 // Declarations for pages without body class
-#main-outlet .users-directory,
-#main-outlet .reviewable {
+#main-outlet .users-directory {
   @include panel($panel-padding);
-  margin-top: 0.5rem;
+  margin-top: $panel-margin-static-pages;
 }

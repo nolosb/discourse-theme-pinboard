@@ -1,52 +1,59 @@
-#main-outlet {
-  .main-content {
-    // Lists except top page
-    &.discovery:not(.top),
-    &.tag {
-      .list-container #list-area {
-        @include panel(2rem);
-        padding-top: 1.25rem;
-        margin-top: 2rem;
-      }
-    }
-    // Non-lists
-    &.topic,
-    &.user,
-    &.admin,
-    &.review,
-    &.tags.index,
-    &.groups,
-    &.group,
-    &.badges,
-    &.full-page-search {
-      @include panel(2rem);
+//List pages except top page
+body:not(.landing-page) {
+  #main-outlet {
+    .list-container #list-area {
+      @include panel($panel-padding);
+      margin-top: $panel-margin-list-pages;
     }
   }
 }
+// Non-list-pages
+.admin-interface,
+.users-page,
+.user-messages-page,
+.user-summary-page,
+.user-activity-page,
+.user-notifications-page,
+.user-invites-page,
+.user-preferences-page,
+.badges-page,
 .about-page,
 .static-faq,
 .static-tos,
-.static-privacy,
-.users-page {
-  #main-outlet .container:not(#main-container) {
-    @include panel(2rem);
-  }
-}
-//remove shaded backgrounds
-.main-content {
-  &.full-page-search {
-    .search-container {
-      .search-header,
-      .search-filters,
-      .search-filters .search-advanced-filters {
-        background: transparent;
-      }
-    }
-  }
-  &.group {
-    .group-details-container {
-      background: transparent;
+.static-privacy {
+  #main-outlet {
+    // Render panels on sub-container, else notification banners are within the panel
+    .container:not(#main-container) {
+      @include panel($panel-padding);
+      margin-top: $panel-margin-static-pages;
     }
   }
 }
+// Groups page
+.groups-page {
+  #main-outlet {
+    // Additional declaration, as no class on groups div
+    .above-main-container-outlet {
+      display: none;
+    }
+    // Render panels on sub-container, else notification banners are within the panel
+    > div:not(#main-container) {
+      @include panel($panel-padding);
+      margin-top: $panel-margin-static-pages;
+    }
+  }
+}
+// Topic pages 
+.archetype-regular
+  #main-outlet {
+    // Render panels on sub-container, else notification banners are within the panel
+    > .regular  {
+      @include panel($panel-padding);
+      margin-top: $panel-margin-static-pages;
+    }
+  }
 
+// Declarations for pages without body class
+#main-outlet .reviewable {
+  @include panel($panel-padding);
+}
