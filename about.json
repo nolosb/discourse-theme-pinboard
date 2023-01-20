@@ -6,6 +6,10 @@
     "icon-categories": "assets/compass-solid.svg",
     "icon-tags": "assets/tags-solid.svg"
   },
-  "color_schemes": {
-  }
+  "components": [
+    "https://github.com/discourse/discourse-color-scheme-toggle.git",
+    "https://github.com/discourse/discourse-clickable-topic.git",
+    "https://github.com/discourse/discourse-header-search.git",
+    "https://github.com/nolosb/discourse-tag-styles.git"
+  ]
 }
