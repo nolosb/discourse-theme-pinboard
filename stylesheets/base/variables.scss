@@ -1,17 +1,13 @@
-:root {
-  --d-sidebar-section-link-prefix-margin-right: 0.85rem;
-  --d-sidebar-section-header-text-font-size: 1.25rem;
-  --d-sidebar-row-font-size: 1.25rem;
-  --d-sidebar-section-link-prefix-width: 1.25rem;
-}
 .navigation-container {
   --nav-space: 0;
 }
-$sidebar-section-gap: 2rem;
-$sidebar-section-content-gap: 0.75rem;
+
 $panel-padding: 2rem;
 $panel-margin-list-pages: 2rem;
 $panel-margin-static-pages: 1.5rem;
+
+$sidebar-section-gap: 1.65rem;
+$sidebar-section-content-gap: 0.75rem;
 
 $main-radius: 12px;
 $button-radius: 8px;

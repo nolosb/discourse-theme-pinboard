@@ -1,136 +1,101 @@
+:root {
+  --d-sidebar-section-link-prefix-margin-right: 0.85rem;
+  --d-sidebar-section-header-text-font-size: 1.25rem;
+  --d-sidebar-row-font-size: 1.25rem;
+  --d-sidebar-section-link-prefix-width: 1.25rem;
+  --d-sidebar-highlight-background: transparent;
+  --d-sidebar-section-link-icon-size: 0.875rem;
+}
+
 // Common
-.sidebar-wrapper,
-.sidebar-hamburger-dropdown {
-  .sidebar-sections {
-    padding-top: 1.75rem;
-    row-gap: $sidebar-section-gap;
-    .sidebar-section-message-wrapper {
-      display: none;
-    }
-    .sidebar-section-header-wrapper {
-      &:hover,
-      &:focus,
-      &.active {
-        background: transparent;
-      }
-      .sidebar-section-header-collapsable {
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-        color: var(--primary-high);
-      }
-    }
-    .sidebar-section-content {
-      display: flex;
-      flex-direction: column;
-      padding-bottom: 0;
-      row-gap: $sidebar-section-content-gap;
-      .sidebar-section-link-wrapper {
-        .sidebar-section-link {
-          &:hover,
-          &:focus,
-          &.active {
-            background: transparent;
-          }
-          .sidebar-section-link-content-badge {
-            font-size: 0.875rem;
-          }
-        }
-      }
-    }
+.sidebar-sections {
+  padding-top: 1.75rem;
+  row-gap: $sidebar-section-gap;
+}
 
-    // Community
-    .sidebar-section-community {
-      .sidebar-section-header-wrapper {
-        display: none;
-      }
-      .sidebar-more-section-links-details {
-        @if ($sidebar_show_more == "false") {
-          display: none;
-        }
-        &:hover {
-          background: transparent;
-        }
-      }
-      .sidebar-section-content {
-        row-gap: $sidebar-section-gap;
-      }
-    }
-    // Collapsables
-    .sidebar-section-categories,
-    .sidebar-section-tags {
-      .sidebar-section-header-wrapper {
-        .sidebar-section-header-text {
-          display: inline-block;
-        }
-        &:before {
-          width: 1em;
-          height: 1em;
-          margin-right: var(--d-sidebar-section-link-prefix-margin-right);
-        }
-      }
-      .sidebar-section-content {
-        margin-top: 1rem;
-        margin-left: 2rem;
-        .sidebar-row {
-          font-size: 1.1rem;
-        }
-        .sidebar-section-link-prefix {
-          &.icon .svg-icon {
-            // scale submenu icons
-            width: 0.8em;
-            height: 0.8em;
-          }
+.sidebar-section-wrapper .sidebar-section-header.sidebar-section-header-collapsable {
+  color: var(--primary-high);
+}
 
-          .prefix-span {
-            // scale submenu category bullets
-            // border-radius: 50%;
-            width: 10px;
-            height: 10px;
-            overflow: hidden;
-          }
-        }
+.sidebar-sections .sidebar-section-content {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+  row-gap: $sidebar-section-content-gap;
+}
+
+// Community
+#sidebar-section-content-community .sidebar-section-link-wrapper:last-of-type {
+  @if ($sidebar_show_more == 'false') {
+    display: none;
+  }
+}
+#sidebar-section-content-community.sidebar-section-content {
+  row-gap: $sidebar-section-gap;
+}
+
+// Categories and Tags
+.sidebar-section[data-section-name='categories'],
+.sidebar-section[data-section-name='tags'] {
+  .sidebar-section-header:before {
+    display: inline-block;
+    width: var(--d-sidebar-section-link-icon-size);
+    height: var(--d-sidebar-section-link-icon-size);
+    margin-right: var(--d-sidebar-section-link-prefix-margin-right);
+  }
+  .sidebar-section-header-caret {
+    display: none;
+  }
+  .sidebar-section-content {
+    margin-top: 1rem;
+    margin-left: 1.4rem;
+    .sidebar-section-link-prefix {
+      &.icon .svg-icon {
+        // scale submenu icons
+        width: var(--d-sidebar-section-link-icon-size);
+        height: var(--d-sidebar-section-link-icon-size);
       }
-    }
-    // Categories
-    .sidebar-section-categories {
-      @if ($show_categories == "false") {
-        display: none;
-      }
-      .sidebar-section-header-wrapper {
-        .sidebar-section-header-text {
-        }
-        &:before {
-          content: url($icon-categories);
-        }
-      }
-    }
-    // Tags
-    .sidebar-section-tags {
-      @if ($show_tags == "false") {
-        display: none;
-      }
-      .sidebar-section-header-wrapper {
-        .sidebar-section-header-text {
-        }
-        &:before {
-          content: url($icon-tags);
-        }
-      }
-      .sidebar-section-message {
-        display: none; // dont display the get started message for tags
-      }
-    }
-    // Messages
-    .sidebar-section-messages {
-      .sidebar-section-header-wrapper {
-        display: none;
-      }
-      .sidebar-section-link-wrapper:not(:first-of-type) {
-        display: none; //only show Inbox link
+
+      .prefix-span {
+        // scale submenu category bullets
+        // border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        overflow: hidden;
       }
     }
   }
 }
+// Categories only
+.sidebar-section[data-section-name='categories'] {
+  @if ($show_categories == 'false') {
+    display: none;
+  }
+  .sidebar-section-header:before {
+    content: url($icon-categories);
+  }
+}
+
+// Tags only
+.sidebar-section[data-section-name='tags'] {
+  @if ($show_tags == 'false') {
+    display: none;
+  }
+  .sidebar-section-header:before {
+    content: url($icon-tags);
+  }
+}
+
+// Messages
+.sidebar-section[data-section-name='messages'] {
+  .sidebar-section-header-wrapper {
+    display: none;
+  }
+  .sidebar-section-link-wrapper:not(:first-of-type) {
+    display: none; //only show Inbox link
+  }
+}
+
 // Layout only
 .sidebar-wrapper {
   background-color: var(--canvas);
@@ -138,22 +103,15 @@
     display: none;
   }
 }
-// Panel only
-.sidebar-hamburger-dropdown {
-  .sidebar-sections {
-    .sidebar-section-content {
-      padding-bottom: $sidebar-section-gap;
-    }
-  }
-}
+
 // Mobile only
 .hamburger-panel .revamped {
   .sidebar-hamburger-dropdown {
-    .sidebar-sections {
-      row-gap: 0;
-      .sidebar-section-content {
-        padding-bottom: 0;
-      }
+    .sidebar-sections .sidebar-section-content {
+      padding-bottom: 0;
     }
+  }
+  .sidebar-section-wrapper {
+    margin-bottom: 0;
   }
 }
