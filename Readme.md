@@ -6,5 +6,5 @@ An open-source theme for Discourse
 
 Live site: https://pinboard.kostka.studio
 
-Discussion and feedback: https://meta.discourse.org/t/pinboard-a-sliding-theme/252446
+Discussion and feedback: https://meta.discourse.org/t/252446
 
