@@ -1,0 +1,13 @@
+// Color
+:root {
+  --canvas: var(--secondary-very-high);
+  --shadow: 0 1px 1px hsl(30deg 0% 0% / 0.025), 0 2px 2px hsl(30deg 0% 0% / 0.025), 0 4px 4px hsl(30deg 0% 0% / 0.02), 0 8px 8px hsl(30deg 0% 0% / 0.015), 0 16px 16px hsl(30deg 0% 0% / 0.01);
+}
+body {
+  background-color: var(--canvas);
+}
+
+// Font
+html.desktop-view {
+  font-size: 16px;
+}

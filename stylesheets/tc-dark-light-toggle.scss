@@ -1,0 +1,10 @@
+.discourse-no-touch button.color-scheme-toggler.btn-flat {
+  &:hover .d-icon {
+    color: var(--primary-medium); // Lower hover-color
+  }
+
+  // Fix as icon stays highlighted in button:focus
+  &:focus .d-icon {
+    color: var(--header_primary-low-mid);
+  }
+}

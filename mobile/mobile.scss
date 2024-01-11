@@ -1,26 +1,13 @@
-// Base
-@import "base/fonts";
-@import "base/colors";
-@import "base/variables";
-@import "mobile/variables";
-@import "base/mixins";
-// Layouts
-@import "layouts/site";
-@import "mobile/site";
-@import "layouts/panels";
-@import "mobile/panels";
-@import "layouts/landing";
-// Components
-@import "components/badges";
-@import "components/buttons";
-// Patterns
-@import "patterns/sidebar";
-@import "patterns/header";
-@import "mobile/navbar";
-@import "mobile/topiclist";
-@import "patterns/banners";
-// Plugins
-@import "plugins/header-search";
-@import "plugins/versatile-showcase";
-@import "plugins/dev-utils";
-@import "plugins/dark-light-toggle";
+@import 'list-controls-mobile';
+
+$sidebar-section-gap: 1.25rem;
+
+.d-header {
+  height: 70px;
+}
+tbody {
+  border-top: none;
+}
+.featured-lists__list-container {
+  padding-top: 1rem;
+}

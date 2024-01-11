@@ -1,15 +1,17 @@
 :root {
   --d-sidebar-section-link-prefix-margin-right: 0.85rem;
   --d-sidebar-section-header-text-font-size: 1.25rem;
-  --d-sidebar-row-font-size: 1.25rem;
   --d-sidebar-section-link-prefix-width: 1.25rem;
   --d-sidebar-highlight-background: transparent;
   --d-sidebar-section-link-icon-size: 0.875rem;
+  --d-sidebar-header-color: var(--primar-high);
 }
+$sidebar-section-gap: 1.65rem;
+$sidebar-section-content-gap: 0.75rem;
 
 // Common
 .sidebar-sections {
-  padding-top: 1.75rem;
+  padding-top: 1.5rem;
   row-gap: $sidebar-section-gap;
 }
 
@@ -100,7 +102,22 @@
 .sidebar-wrapper {
   background-color: var(--canvas);
   .sidebar-footer-wrapper {
-    display: none;
+    background: transparent;
+  }
+  .sidebar-footer-wrapper .sidebar-footer-container {
+    padding: 20px var(--d-sidebar-row-horizontal-padding);
+  }
+  .sidebar-footer-wrapper .sidebar-footer-container::before {
+    background: transparent;
+  }
+  .sidebar-footer-wrapper .sidebar-footer-actions {
+    margin-left: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 25px;
+  }
+  .sidebar-footer-wrapper .sidebar-footer-actions > button {
+    padding: 0 !important;
   }
 }
 

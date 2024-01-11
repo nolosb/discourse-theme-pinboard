@@ -1,0 +1,13 @@
+.floating-search-input {
+  margin-left: $adjust-header-search; // adjust to align with the main content panel
+}
+.floating-search-input .search-banner-inner.wrap .search-menu .search-input {
+  padding: 0.1em 0.5em;
+  border: none;
+  &:focus-within {
+    outline: none;
+  }
+}
+.floating-search-input .search-banner-inner.wrap .search-menu .search-input #search-term {
+  padding-left: 1em;
+}

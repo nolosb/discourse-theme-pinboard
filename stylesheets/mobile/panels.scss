@@ -1,5 +1,0 @@
-// Declarations for pages without body class
-#main-outlet .users-directory {
-  @include panel($panel-padding);
-  margin-top: $panel-margin-static-pages;
-}

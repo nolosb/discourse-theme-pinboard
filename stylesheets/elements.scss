@@ -1,3 +1,17 @@
+// Categories and Tags settings
+.link-bottom-line {
+  @if ($show_categories == 'false') {
+    .badge-wrapper {
+      display: none;
+    }
+  }
+  @if ($show_tags == 'false') {
+    .discourse-tags {
+      display: none;
+    }
+  }
+}
+// Select-kit
 .select-kit {
   // Adjust text-alignment in select-kit header
   .select-kit-header {

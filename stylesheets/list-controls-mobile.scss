@@ -1,0 +1,29 @@
+.navigation-container {
+  --nav-space: 1.25rem;
+}
+.list-controls .navigation-container {
+  .category-breadcrumb {
+    display: none;
+  }
+  #navigation-bar {
+    li {
+      background: transparent;
+      color: var(--primary-medium);
+      border: none;
+    }
+  }
+}
+
+// don't show navigation bar on category or tag lists
+body.navigation-category,
+body.tags-page {
+  #navigation-bar {
+    display: none;
+  }
+  .navigation-controls {
+    width: 100%;
+  }
+  .navigation-controls .bulk-select {
+    margin-right: auto;
+  }
+}

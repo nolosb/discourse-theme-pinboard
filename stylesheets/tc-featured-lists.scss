@@ -1,0 +1,8 @@
+.featured-lists {
+  &__list-header button {
+    display: none;
+  }
+  &__list-body .topic-list-item:last-of-type {
+    border-bottom: none;
+  }
+}

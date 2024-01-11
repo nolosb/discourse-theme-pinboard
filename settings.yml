@@ -1,13 +1,13 @@
 adjust_header_search:
   type: string
-  default: "100px"
+  default: '120px'
   description:
     en: Adjust header search field position (relative distance from logo)
-custom_top_page:
+custom_homepage:
   type: bool
   default: false
   description:
-    en: Custom layout for the top page. Requires the Versatile Showcase component.
+    en: Custom layout for your homepage. Requires the Featured Lists component.
 show_categories:
   type: bool
   default: true

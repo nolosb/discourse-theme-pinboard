@@ -1,0 +1,16 @@
+.homepage #main-outlet {
+  @if ($custom_homepage == 'true') {
+    // Undeclare styles from Panels component
+    .list-container #list-area {
+      background: transparent;
+      padding: 0;
+      border: none;
+      box-shadow: none;
+    }
+    // Hide top topics list so only Featured Lists are shown
+    .contents,
+    footer.topic-list-bottom {
+      display: none;
+    }
+  }
+}

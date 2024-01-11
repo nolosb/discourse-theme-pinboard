@@ -1,0 +1,24 @@
+.d-header {
+  height: 100px;
+  box-shadow: none;
+  background-color: var(--canvas);
+}
+.d-header .panel {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.d-header .header-buttons {
+  .sign-up-button {
+    display: none;
+  }
+  .login-button {
+    margin-left: 12px;
+  }
+}
+.d-header .d-header-icons #current-user {
+  margin-left: 8px;
+}
+
+.discourse-no-touch .d-header-icons .icon:hover {
+  background-color: transparent;
+}
