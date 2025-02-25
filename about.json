@@ -7,11 +7,10 @@
     "icon-tags": "assets/tags-solid.svg"
   },
   "components": [
-    "https://github.com/discourse/discourse-color-scheme-toggle.git",
     "https://github.com/discourse/discourse-clickable-topic.git",
     "https://github.com/discourse/discourse-header-search.git",
-    "https://github.com/nolosb/discourse-panels.git",
-    "https://github.com/nolosb/discourse-primary-button.git",
-    "https://github.com/nolosb/discourse-rounded.git"
+    "https://gitlab.com/manuelkostka/discourse/helpers/panels.git",
+    "https://gitlab.com/manuelkostka/discourse/helpers/primary-button.git",
+    "https://gitlab.com/manuelkostka/discourse/helpers/rounded.git"
   ]
 }
