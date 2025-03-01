@@ -1,6 +1,6 @@
 adjust_header_search:
   type: string
-  default: '120px'
+  default: "120px"
   description:
     en: Adjust header search field position (relative distance from logo)
 custom_homepage:
