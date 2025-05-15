@@ -1,7 +1,8 @@
 {
   "name": "Pinboard",
-  "about_url": null,
-  "license_url": null,
+  "about_url": "https://meta.discourse.org/t/252446",
+  "license_url": "https://github.com/nolosb/discourse-theme-pinboard/blob/main/License",
+  "screenshots": ["screenshots/light.png", "screenshots/dark.png"],
   "assets": {
     "icon-categories": "assets/compass-solid.svg",
     "icon-tags": "assets/tags-solid.svg"
